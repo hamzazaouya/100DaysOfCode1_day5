@@ -1,8 +1,9 @@
 import 'package:day5/auth/login.dart';
+import 'package:day5/auth/signup.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -11,10 +12,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Login(),
+      home: const Login(),
       routes: {
-        "Login": (context) => Login(),
+        "login": (context) => const Login(),
+        "signup": (context) => const SignUp()
       },
+      theme: ThemeData(
+        primaryColor: Colors.blue,
+        textTheme: const TextTheme(
+          headline3: TextStyle(color: Colors.white, fontSize: 18)
+        )
+      ),
     );
   }
 }

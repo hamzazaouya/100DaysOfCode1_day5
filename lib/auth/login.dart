@@ -48,19 +48,26 @@ class _LoginState extends State<Login> {
                   Container(
                     padding: const EdgeInsets.only(top: 10, bottom: 10),
                     child: Row(children: [
-                      const Text("If you don't have account? "),
+                      const Text("If you don't have account "),
                       InkWell(
-                        onTap: () {},
-                        child: const Text("Click here",style: TextStyle(color: Colors.blue),),
+                        onTap: () {
+                           Navigator.of(context).pushNamed("signup");
+                        },
+                        child: const Text(
+                          "Click here",
+                          style: TextStyle(color: Colors.blue),
+                        ),
                       )
                     ]),
                   ),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(minimumSize: Size(120, 40)),
-                    onPressed: () {},
-                    child: const Text(
+                    onPressed: () {
+                     
+                    },
+                    child: Text(
                       "Login",
-                      style: TextStyle(fontSize: 18),
+                      style: Theme.of(context).textTheme.headline3,
                     ),
                   )
                 ],
