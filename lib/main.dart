@@ -1,5 +1,6 @@
 import 'package:day5/auth/login.dart';
 import 'package:day5/auth/signup.dart';
+import 'package:day5/home/homepage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +16,8 @@ class MyApp extends StatelessWidget {
       home: const Login(),
       routes: {
         "login": (context) => const Login(),
-        "signup": (context) => const SignUp()
+        "signup": (context) => const SignUp(),
+        "homepage": ((context) => const HomePage())
       },
       theme: ThemeData(
         primaryColor: Colors.blue,

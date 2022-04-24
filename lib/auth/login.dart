@@ -12,8 +12,8 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: SingleChildScrollView(
-      child: Container(
-        height: 500,
+      child: SizedBox(
+        height: MediaQuery.of(context).size.height,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -51,7 +51,7 @@ class _LoginState extends State<Login> {
                       const Text("If you don't have account "),
                       InkWell(
                         onTap: () {
-                           Navigator.of(context).pushNamed("signup");
+                          Navigator.of(context).pushNamed("signup");
                         },
                         child: const Text(
                           "Click here",
@@ -63,7 +63,7 @@ class _LoginState extends State<Login> {
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(minimumSize: Size(120, 40)),
                     onPressed: () {
-                     
+                      Navigator.of(context).pushReplacementNamed("homepage");
                     },
                     child: Text(
                       "Login",
